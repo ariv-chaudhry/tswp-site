@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { aboutContent, site } from "@/data/site";
 import { teamIntro, teamMembers } from "@/data/team";
+import { withBasePath } from "@/lib/basePath";
 
 export const metadata: Metadata = {
     title: "About",
@@ -103,7 +104,7 @@ export default function AboutPage() {
 
                         <div className="flex justify-center lg:justify-end">
                             <Image
-                                src="/images/mascot/friends.png"
+                                src={withBasePath("/images/mascot/friends.png")}
                                 alt="Two Student Water Project droplet mascots together"
                                 width={520}
                                 height={320}

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { TeamMember } from "@/types";
+import { withBasePath } from "@/lib/basePath";
 
 interface TeamMemberCardProps {
     member: TeamMember;
@@ -10,7 +11,7 @@ export function TeamMemberCard({ member }: TeamMemberCardProps) {
         <article className="flex h-full w-full flex-col text-center">
             <div className="relative mx-auto aspect-[4/3] w-full overflow-hidden rounded-2xl bg-gradient-to-br from-water/15 to-cyan/10 shadow-sm">
                 <Image
-                    src={member.image}
+                    src={withBasePath(member.image)}
                     alt={member.name}
                     fill
                     className="object-cover"

@@ -4,6 +4,7 @@ import Link from "next/link";
 import { mainNav } from "@/data/navigation";
 import { site } from "@/data/site";
 import { Container } from "@/components/ui/Container";
+import { withBasePath } from "@/lib/basePath";
 
 export function Footer() {
     const year = new Date().getFullYear();
@@ -20,7 +21,7 @@ export function Footer() {
                         >
                             <div className="flex h-11 w-11 items-center justify-center rounded-full bg-white">
                                 <Image
-                                    src="/images/site-logo.svg"
+                                    src={withBasePath("/images/site-logo.svg")}
                                     alt={`${site.name} logo`}
                                     width={42}
                                     height={42}

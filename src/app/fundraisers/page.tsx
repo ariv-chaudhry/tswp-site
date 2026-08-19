@@ -6,6 +6,7 @@ import { ContentCard } from "@/components/ui/ContentCard";
 import { PageHero } from "@/components/ui/PageHero";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import Image from "next/image";
+import { withBasePath } from "@/lib/basePath";
 import {
   challengeCommittee,
   fundraiserInitiatives,
@@ -36,7 +37,7 @@ export default function FundraisersPage() {
             >
                   <div className="relative aspect-[16/10] overflow-hidden rounded-2xl bg-water/10 shadow-sm">
                       <Image
-                          src="/images/12000kmChallengeRunning.avif"
+                          src={withBasePath("/images/12000kmChallengeRunning.avif")}
                           alt={initiative.title}
                           fill
                           className="object-cover"

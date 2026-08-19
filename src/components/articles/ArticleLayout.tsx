@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { Article, ArticleBlock } from "@/types/article";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { withBasePath } from "@/lib/basePath";
 
 interface ArticleLayoutProps {
     article: Article;
@@ -45,7 +46,7 @@ function ArticleBlockView({ block }: { block: ArticleBlock }) {
                 <figure className="my-8 space-y-3">
                     <div className="relative mx-auto aspect-[16/9] w-full overflow-hidden rounded-2xl border border-navy/10 bg-white shadow-sm">
                         <Image
-                            src={block.src}
+                            src={withBasePath(block.src)}
                             alt={block.alt}
                             fill
                             className="object-contain p-2"

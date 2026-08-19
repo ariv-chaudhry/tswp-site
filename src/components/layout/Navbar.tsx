@@ -9,6 +9,7 @@ import { ctaNav, mainNav } from "@/data/navigation";
 import { site } from "@/data/site";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { withBasePath } from "@/lib/basePath";
 
 export function Navbar() {
     const pathname = usePathname();
@@ -26,7 +27,7 @@ export function Navbar() {
                     aria-label={`${site.name} home`}
                 >
                     <Image
-                        src="/images/site-logo.svg"
+                        src={withBasePath("/images/site-logo.svg")}
                         alt={`${site.name} logo`}
                         width={42}
                         height={42}

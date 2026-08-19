@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
+import { withBasePath } from "@/lib/basePath";
 
 export function MerchandiseSignup() {
     return (
@@ -30,7 +31,7 @@ export function MerchandiseSignup() {
 
                     <div className="flex justify-center lg:justify-end">
                         <Image
-                            src="/images/mascot/shopping.png"
+                            src={withBasePath("/images/mascot/shopping.png")}
                             alt="Student Water Project droplet mascot carrying shopping bags"
                             width={360}
                             height={360}

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { ReactNode } from "react";
+import { withBasePath } from "@/lib/basePath";
 
 interface PageHeroProps {
     eyebrow?: string;
@@ -51,7 +52,7 @@ export function PageHero({
                     {mascotSrc && (
                         <div className="flex justify-center lg:justify-end">
                             <Image
-                                src={mascotSrc}
+                                src={withBasePath(mascotSrc)}
                                 alt={mascotAlt}
                                 width={360}
                                 height={360}

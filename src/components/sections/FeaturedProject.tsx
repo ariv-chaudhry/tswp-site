@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import Image from "next/image";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { withBasePath } from "@/lib/basePath";
 
 export function FeaturedProject() {
   return (
@@ -16,7 +17,7 @@ export function FeaturedProject() {
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
                   <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-water/10 shadow-sm">
                       <Image
-                          src="/images/Rianyabao Memorial Academy.avif"
+                          src={withBasePath("/images/Rianyabao Memorial Academy.avif")}
                           alt={`${featuredProject.school} project photo`}
                           fill
                           className="object-cover"

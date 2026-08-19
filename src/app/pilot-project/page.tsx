@@ -7,6 +7,7 @@ import { PageHero } from "@/components/ui/PageHero";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { pilotProject } from "@/data/projects";
 import Image from "next/image";
+import { withBasePath } from "@/lib/basePath";
 
 export const metadata: Metadata = {
   title: "Pilot Project",
@@ -46,7 +47,7 @@ export default function PilotProjectPage() {
           <div className="mx-auto mt-10 max-w-3xl">
                       <div className="relative aspect-[16/9] overflow-hidden rounded-2xl bg-water/10 shadow-sm">
                           <Image
-                              src="/images/RainwaterHarvestingAndTreatmentSystem.avif"
+                              src={withBasePath("/images/RainwaterHarvestingAndTreatmentSystem.avif")}
                               alt={pilotProject.figures[0].caption}
                               fill
                               className="object-cover"
@@ -116,7 +117,7 @@ export default function PilotProjectPage() {
           <div className="mx-auto mt-10 max-w-3xl">
                       <div className="relative aspect-[16/9] overflow-hidden rounded-2xl bg-water/10 shadow-sm">
                           <Image
-                              src="/images/CurrentConditionOfSchoolToilets.avif"
+                              src={withBasePath("/images/CurrentConditionOfSchoolToilets.avif")}
                               alt={pilotProject.figures[0].caption}
                               fill
                               className="object-cover"
@@ -145,7 +146,7 @@ export default function PilotProjectPage() {
           <div className="mx-auto mt-10 max-w-3xl">
                       <div className="relative aspect-[16/9] overflow-hidden rounded-2xl bg-water/10 shadow-sm">
                           <Image
-                              src={pilotProject.figures[0].image}
+                              src={withBasePath(pilotProject.figures[0].image)}
                               alt={pilotProject.figures[0].caption}
                               fill
                               className="object-cover"
@@ -196,7 +197,7 @@ export default function PilotProjectPage() {
           <div className="mx-auto mt-10 max-w-3xl">
                       <div className="relative aspect-[16/9] overflow-hidden rounded-2xl bg-water/10 shadow-sm">
                           <Image
-                              src="/images/BannerSignedBy100Students.avif"
+                              src={withBasePath("/images/BannerSignedBy100Students.avif")}
                               alt={pilotProject.figures[0].caption}
                               fill
                               className="object-cover"

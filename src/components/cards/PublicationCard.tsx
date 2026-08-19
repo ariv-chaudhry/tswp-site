@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/Button";
 import type { Publication } from "@/data/publications";
+import { withBasePath } from "@/lib/basePath";
 
 interface PublicationCardProps {
     publication: Publication;
@@ -12,7 +13,7 @@ export function PublicationCard({ publication }: PublicationCardProps) {
             {publication.image && (
                 <div className="relative aspect-[3/4] overflow-hidden rounded-t-2xl bg-slate-100">
                     <Image
-                        src={publication.image}
+                        src={withBasePath(publication.image)}
                         alt={`${publication.title} cover image`}
                         fill
                         className="object-cover"

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
+import { withBasePath } from "@/lib/basePath";
 
 export function SocialFollow() {
     return (
@@ -32,7 +33,7 @@ export function SocialFollow() {
 
                     <div className="flex justify-center lg:justify-end">
                         <Image
-                            src="/images/mascot/camera.png"
+                            src={withBasePath("/images/mascot/camera.png")}
                             alt="Student Water Project droplet mascot holding a camera"
                             width={320}
                             height={320}
