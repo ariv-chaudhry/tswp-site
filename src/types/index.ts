@@ -37,12 +37,12 @@ export interface CtaLink {
 }
 
 export interface TeamMember {
-  name: string;
-  role: string;
-  bio: string;
-  /** Placeholder path — add real photo to /public/images/team/ */
-  image: string;
-  linkedin?: string;
+    name: string;
+    role: string;
+    bio: string;
+    image: string;
+    imagePosition?: string;
+    linkedin?: string;
 }
 
 export interface VolunteerRole {

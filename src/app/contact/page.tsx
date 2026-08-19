@@ -1,85 +1,59 @@
-import type { Metadata } from "next";
-import { ContactForm } from "@/components/ui/ContactForm";
-import { Container } from "@/components/ui/Container";
-import { ContentCard } from "@/components/ui/ContentCard";
 import { PageHero } from "@/components/ui/PageHero";
-import { contactInfo } from "@/data/contact";
-
-export const metadata: Metadata = {
-  title: "Contact",
-  description: contactInfo.subheading,
-};
+import { Container } from "@/components/ui/Container";
 
 export default function ContactPage() {
-  return (
-    <>
-      <PageHero
-        eyebrow="Contact"
-        title={contactInfo.heading}
-        description={contactInfo.subheading}
-      />
+    return (
+        <>
+            <PageHero
+                eyebrow="Contact"
+                title="Get in touch"
+                description="Have a question, partnership idea, or want to learn more about The Student Water Project? We'd love to hear from you."
+                mascotSrc="/images/mascot/location.png"
+                mascotAlt="Student Water Project droplet mascot standing beside a signpost"
+            />
 
-      <section className="py-16 sm:py-24">
-        <Container>
-          <div className="grid gap-10 lg:grid-cols-2">
-            <ContentCard>
-              <ContactForm />
-            </ContentCard>
+            <section className="py-16 sm:py-20">
+                <Container>
+                    <div className="mx-auto grid max-w-5xl gap-10 lg:grid-cols-2">
+                        <div>
+                            <h2 className="text-3xl font-bold text-navy">
+                                Start a conversation
+                            </h2>
 
-            <div className="space-y-6">
-              <ContentCard title="Get In Touch">
-                <p className="text-sm leading-relaxed text-navy/70">
-                  We&apos;re based in {contactInfo.location}, but our work
-                  reaches across borders. Reach out however works best for you.
-                </p>
-                <ul className="mt-6 space-y-3 text-sm">
-                  <li>
-                    <span className="font-semibold text-navy">Email: </span>
-                    <a
-                      href={`mailto:${contactInfo.email}`}
-                      className="text-water-dark hover:underline"
-                    >
-                      {contactInfo.email}
-                    </a>
-                  </li>
-                  <li>
-                    <span className="font-semibold text-navy">Instagram: </span>
-                    <a
-                      href={contactInfo.instagramUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-water-dark hover:underline"
-                    >
-                      {contactInfo.instagramHandle}
-                    </a>
-                  </li>
-                  <li>
-                    <span className="font-semibold text-navy">Location: </span>
-                    <span className="text-navy/70">{contactInfo.location}</span>
-                  </li>
-                </ul>
-              </ContentCard>
+                            <p className="mt-5 leading-7 text-navy/70">
+                                Whether you are interested in volunteering, collaborating,
+                                supporting a project, or simply learning more about our work,
+                                reach out to our team.
+                            </p>
 
-              <ContentCard title="Team leads">
-                <ul className="space-y-4">
-                  {contactInfo.teamEmails.map((person) => (
-                    <li key={person.email}>
-                      <p className="font-semibold text-navy">{person.name}</p>
-                      <p className="text-sm text-navy/55">{person.role}</p>
-                      <a
-                        href={`mailto:${person.email}`}
-                        className="text-sm text-water-dark hover:underline"
-                      >
-                        {person.email}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </ContentCard>
-            </div>
-          </div>
-        </Container>
-      </section>
-    </>
-  );
+                            <a
+                                href="mailto:thestudentwaterproject@gmail.com"
+                                className="mt-6 inline-block font-semibold text-sky hover:underline"
+                            >
+                                thestudentwaterproject@gmail.com
+                            </a>
+                        </div>
+
+                        <div className="rounded-3xl border border-navy/10 bg-white p-7 shadow-sm sm:p-8">
+                            <h2 className="text-xl font-bold text-navy">
+                                Send us a message
+                            </h2>
+
+                            <p className="mt-3 text-sm leading-6 text-navy/65">
+                                Our full website contact form is coming soon. In the meantime,
+                                you can contact the team directly by email.
+                            </p>
+
+                            <a
+                                href="mailto:thestudentwaterproject@gmail.com"
+                                className="mt-6 inline-flex rounded-full bg-sky px-6 py-3 font-bold text-white transition hover:bg-navy"
+                            >
+                                Email us
+                            </a>
+                        </div>
+                    </div>
+                </Container>
+            </section>
+        </>
+    );
 }
