@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { ContentCard } from "@/components/ui/ContentCard";
 import { PageHero } from "@/components/ui/PageHero";
-import { PlaceholderImage } from "@/components/ui/PlaceholderImage";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import Image from "next/image";
 import {
